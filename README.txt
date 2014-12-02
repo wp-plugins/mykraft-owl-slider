@@ -39,20 +39,18 @@ Add the following line in your template where you want slider to be displayed
 
 <?php if (function_exists('homepage_slider')) { homepage_slider();} ?>
 
-NOTE: Using Mykraft themes doesn’t require this code line to be added manually since all Mykraft themes are slider ready.
+NOTE: Using Mykraft themes doesn't require this code line to be added manually since all Mykraft themes are slider ready.
 
 
 ==Frequently Asked Questions==
 
-=How to rearrange slides?=
+= How to rearrange slides? =
 
 Use the custom post type published date to prioritize slides order
 
-= What about foo bar? =
+= Is there a slider left-right navigation (arrows)? =
 
-Is there a slider left-right navigation (arrows)?
-
-No, you don’t need navigation links, slider is touch enabled and you can move it using mouse or by touch.
+No, but you don't need navigation links, slider is touch enabled and you can move it using mouse or by touch.
 
 ==Screenshots==
 
