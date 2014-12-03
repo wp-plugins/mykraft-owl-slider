@@ -1,5 +1,5 @@
 === Mykraft Owl Slider Plugin ===
-Contributors: Vitomir Gojak
+Contributors: gojak
 Donate link: http://megakrafts.com/donate
 Tags: plugin, wordpress, responsive, slider, custom post type, taxonomy, simple, slideshow, custom
 Requires at least: 3.0
@@ -37,7 +37,7 @@ Click Install Now button
 Then click Activate Plugin button
 Add the following line in your template where you want slider to be displayed
 
-<?php if (function_exists('homepage_slider')) { homepage_slider();} ?>
+<code><?php if (function_exists('homepage_slider')) { homepage_slider();} ?></code>
 
 NOTE: Using Mykraft themes doesn't require this code line to be added manually since all Mykraft themes are slider ready.
 
