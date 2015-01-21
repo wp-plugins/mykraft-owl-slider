@@ -4,7 +4,7 @@ Donate link: http://megakrafts.com/donate
 Tags: plugin, wordpress, responsive, slider, custom post type, taxonomy, simple, slideshow, custom
 Requires at least: 3.0
 Tested up to: 4.1  
-Stable tag: trunk
+Stable tag: 1.1
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -25,6 +25,7 @@ Mykraft Owl Slider is a simple, responsive WordPress slider plugin ideal for tem
 8. Slide description
 9. Auto play
 10. WordPress extended Customize page with slider options
+11. Set slider width in pixels (default slider width 100%)
 
  
 ==Installation==
@@ -59,10 +60,16 @@ http://megakrafts.com/mykraft-owl-slider-plugin/
 
 ==Changelog==
 
+= 1.1 =
+* Added slider maximum width support for Customizer.
+
 = 1.0 =
 * Published version
 
 == Upgrade Notice ==
+
+= 1.1 =
+Upgrade: Added slider maximum width support for Customizer.
 
 = 1.0 =
 No upgrade needed at this pont.

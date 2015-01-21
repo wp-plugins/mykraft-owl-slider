@@ -3,7 +3,7 @@
 Plugin Name: Mykraft Owl Slider
 Plugin URI: http://megakrafts.com/mykraft-owl-slider-plugin
 Description: Mykraft Owl Slider is a simple, responsive WordPress slider plugin ideal for template homepage. It is based on OWL Carousel, touch enabled jQuery plugin. Slider works as a custom post type with featured images, excerpt as a slide description and each slide can have a link with an option to open a link in a new tab.
-Version: 1.0
+Version: 1.1
 Author: Vitomir Gojak
 Author Email: mykraftmail@gmail.com
 License: GPLv2 or later
@@ -12,7 +12,6 @@ License: GPLv2 or later
 //	Slider Post Thumbnail
 	if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'slider', 1200, 400, true );
 	}
 	
 //  Add Custom Owl Slider Script
@@ -271,6 +270,16 @@ License: GPLv2 or later
 		endif;
 	}
     add_action('wp_head', 'slider_hidepagination');
+
+//  Slider Width for WP Customizer
+	function slider_width_size() { ?>
+		<style type="text/css">
+			.owl-background {
+			max-width: <?php if (get_theme_mod( 'slider_width' )) : echo get_theme_mod( 'slider_width');  endif; ?>px;
+			}
+    	</style>
+	<?php }
+    add_action('wp_head', 'slider_width_size');
 	
 //  WP Customizer Menu Slider Options
     new slider_theme_customizer();
@@ -332,7 +341,18 @@ License: GPLv2 or later
         	    'type'    => 'checkbox',
         	    'priority' => 4
         	) );
+			
+			// Slider Width
+			$wp_manager->add_setting( 'slider_width', array(
+                'default'        => '',
+			) );
+			
+			$wp_manager->add_control( 'slider_width', array(
+                'label'   => 'Slider Maximum Width - numeric value (e.g. 1400), without px',
+				'section' => 'customiser_slider_theme_section',
+				'type'    => 'text',
+				'priority' => 5
+			) );		
         }
     }
-
 ?>
